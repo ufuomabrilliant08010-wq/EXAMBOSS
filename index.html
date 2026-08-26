@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>ExamBoss V2</title><link rel="stylesheet" href="/src/style.css">
+</head>
+<body>
+<header><div class="brand">Exam<span>Boss</span></div><nav>
+<button data-view="home">Home</button><button data-view="teacher">Teacher</button><button data-view="student">Student</button><button id="authBtn">Login</button>
+</nav></header>
+<main>
+<section id="home" class="view active"><div class="hero"><div><p class="eyebrow">REAL-TIME EXAMINATION PLATFORM</p>
+<h1>Host exams. <span>Monitor live.</span> Get results instantly.</h1>
+<p>ExamBoss connects teachers and students through live, multi-user online examinations.</p>
+<div class="actions"><button class="primary" data-view="teacher">Teacher Dashboard</button><button class="secondary" data-view="student">Join Exam</button></div></div>
+<div class="hero-card"><b>● LIVE</b><h2>Biology Mock Exam</h2><p>Students connected in real time</p><div class="big">47</div><small>students writing</small></div></div></section>
+
+<section id="teacher" class="view"><div class="head"><div><p class="eyebrow">TEACHER</p><h2>Teacher Dashboard</h2></div><button class="primary" id="createBtn">+ Create Exam</button></div><div id="teacherContent"></div></section>
+
+<section id="student" class="view"><div class="narrow"><p class="eyebrow">STUDENT</p><h2>Join an Exam</h2><div class="card form"><input id="joinName" placeholder="Your name"><input id="joinCode" placeholder="Exam code"><button class="primary" id="joinBtn">Join</button></div><div id="studentContent"></div></div></section>
+</main>
+
+<div id="authModal" class="modal"><div class="modal-card"><button class="x" data-close>×</button><h2 id="authTitle">Sign in</h2><input id="email" placeholder="Email"><input id="password" type="password" placeholder="Password"><select id="role"><option value="teacher">Teacher</option><option value="student">Student</option></select><button class="primary full" id="authSubmit">Sign in</button><button class="link" id="toggleAuth">Create account</button><p id="authMsg"></p></div></div>
+
+<div id="examModal" class="modal"><div class="modal-card"><button class="x" data-close>×</button><h2>Create Exam</h2><input id="examTitle" placeholder="Exam title"><input id="examSubject" placeholder="Subject"><input id="examDuration" type="number" value="30" placeholder="Duration"><input id="examPass" type="number" value="50" placeholder="Pass mark"><div id="questions"></div><button class="secondary full" id="addQ">+ Add Question</button><button class="primary full" id="publish">Publish Exam</button></div></div>
+<script type="module" src="/src/app.js"></script>
+</body></html>
